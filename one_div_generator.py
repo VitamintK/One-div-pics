@@ -4,6 +4,8 @@ width, height = im.size
 print(width, height)
 pix = im.load()
 box_shadows=[]
+#iterate through each pixel of the image, and append a string.
+#The string is a css rule for a box shadow at the position x,y, with the color of the pixel.
 for y in range(height):
     for x in range(width):
         box_shadows.append('{x}px {y}px 0 0 rgb{rgb}'.format(x=x,y=y,rgb=pix[x,y]))
